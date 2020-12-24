@@ -185,11 +185,12 @@ def function11():
     # Replace all odd numbers in arr with -1 without changing arr.
     
     arr = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
-    ans = #write your code here 
+    arr[arr%2!=0] = -1
+    ans =  arr
   
     return ans
 
-     """
+    """
      Expected Output:
               array([ 0, -1,  2, -1,  4, -1,  6, -1,  8, -1])
      """ 
@@ -200,11 +201,11 @@ def function12():
     # HINT: use stacking concept
     
     arr = np.array([1,2,3])
-    ans = #write your code here 
+    ans = np.hstack((np.ones(3,dtype=np.int),np.ones(3,dtype=np.int)*2,np.ones(3,dtype=np.int)*3,arr,arr,arr))
   
     return ans
 
-     """
+    """
      Expected Output:
               array([1, 1, 1, 2, 2, 2, 3, 3, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3])
      """ 
@@ -215,11 +216,11 @@ def function13():
     
     
     arr = np.array([2, 6, 1, 9, 10, 3, 27])
-    ans = #write your code here 
+    ans = arr[(arr >= 5) & (arr <= 10)]
   
     return ans
 
-     """
+    """
      Expected Output:
               array([6, 9])
      """ 
