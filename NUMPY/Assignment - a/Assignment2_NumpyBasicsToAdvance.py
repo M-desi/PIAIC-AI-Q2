@@ -27,7 +27,7 @@ def function1():
     # dimension should be 6row 2 columns  
     # and assign this array values in x values in x variable
     # Hint: you can use arange and reshape numpy methods  
-    x =  # Write your code here 
+    x =  np.arange(1,13).reshape(6,2)
 
     return x
     """
@@ -48,7 +48,7 @@ def function2():
     #array value should be satart from 10 and end with 36 (both included)
     # Hint: dtype, reshape 
     
-    x =     #wrtie your code here
+    x = np.arange(10,36).reshape(3,3,3)
 
 
     return x
@@ -72,7 +72,7 @@ def function3():
     #extract those numbers from given array. those are must exist in 5,7 Table
     #example [35,70,105,..]
     a = np.arange(1, 100*10+1).reshape((100,10))
-    x = a[] #wrtie your code here
+    x = a[((a % 5 == 0) or (a % 7 == 0))]
     return x
     """
     Expected Output:
@@ -87,7 +87,7 @@ def function4():
    
     arr = np.arange(9).reshape(3,3)
   
-    return #wrtie your code here
+    return arr[:,[1,0,2]]
     """
     Expected Output:
           array([[1, 0, 2],
@@ -99,7 +99,7 @@ def function4():
 def function5():
     #Create a null vector of size 20 with 4 rows and 5 columns with numpy function
    
-    z = #wrtie your code here
+    z = np.zeros(20).reshape(4,5)
   
     return z
     """
@@ -114,7 +114,8 @@ def function5():
 def function6():
     # Create a null vector of size 10 but the fifth and eighth value which is 10,20 respectively
    
-    arr = #wrtie your code here
+    arr = np.zeros(10)
+    arr[4],arr[7] = 10,20
   
     return arr
    
@@ -124,7 +125,7 @@ def function7():
     #  Create an array of zeros with the same shape and type as X. Dont use reshape method
     x = np.arange(4, dtype=np.int64)
   
-    return #write your code here
+    return np.zeros(4,dtype=np.int64) 
 
     """
     Expected Output:
@@ -135,11 +136,11 @@ def function7():
 def function8():
     # Create a new array of 2x5 uints, filled with 6.
     
-    x = #write your code here
+    x = np.ones(10).reshape(2,5)*6
   
     return x
 
-     """
+    """
      Expected Output:
               array([[6, 6, 6, 6, 6],
                      [6, 6, 6, 6, 6]], dtype=uint32)
@@ -149,11 +150,11 @@ def function8():
 def function9():
     # Create an array of 2, 4, 6, 8, ..., 100.
     
-    a = # write your code here
+    a = np.arange(2,101,2)
   
     return a
 
-     """
+    """
      Expected Output:
               array([  2,   4,   6,   8,  10,  12,  14,  16,  18,  20,  22,  24,  26,
                     28,  30,  32,  34,  36,  38,  40,  42,  44,  46,  48,  50,  52,
@@ -167,11 +168,11 @@ def function10():
     
     arr = np.array([[3,3,3],[4,4,4],[5,5,5]])
     brr = np.array([1,2,3])
-    subt = # write your code here 
+    subt = arr - brr+([0,1,2],[-1,0,1],[-2,-1,0])
   
     return subt
 
-     """
+    """
      Expected Output:
                array([[2 2 2]
                       [2 2 2]
